@@ -19,9 +19,11 @@
 |------|----|-------|
 |name|text|null: false, foreign_key: true|
 |email|string|null: false, foreign_key: true|
+|password|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :groups, through: :users-groups
+- has_many :groups, through: :users_groups
+- has_many :users_groups
 - has_many :messages
 
 ## groupsテーブル
@@ -32,10 +34,11 @@
 |member|text|null: false, foreign_key: true|
 
 ### Association
-- has_many :users, through: :users-groups
+- has_many :users, through: :users_groups
+- has_many :users_groups
 - has_many :messages
 
-## users-groupsテーブル
+## users_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
