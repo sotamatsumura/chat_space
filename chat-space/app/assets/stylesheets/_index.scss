@@ -1,30 +1,41 @@
+$blueColor: #38AEF0;
+$whiteColor: #FFFFFF;
+$deepBlueColor: #2f3e51;
+$blackColor: #253141;
+$mailTextColor: #333333;
+$subTextColor: #999999;
+$borderColor: #eeeeee;
+$nickNameTextColor: #434A54;
+$dateTextColor: #434A54;
+$grayColor: #B8C3C7;
+
 .wrapper{
   height: 100vh;
   width: 100vw;
 
   .header {
-    background-color: #38AEF0;
+    background-color: $blueColor;
     width: 100%;
     text-align: center;
-    color:#FFFFFF;
+    color: $whiteColor;
   }
 
   .contents{
 
     &__left-content {
-    background-color: #2f3e51;
+    background-color: $deepBlueColor;
     width: 300px;
     height: 100vh;
     float: left;
 
       &-high {
-      background-color: #253141;
+      background-color: $blackColor;
       width: calc(100% - 40px);
       height: 100px;
       padding: 0px 20px 0px 20px;
 
         &-text {
-        color: #FFFFFF;
+        color: $whiteColor;
         font-size: 16px;
         font-weight: bold;
         height: 100px;
@@ -35,7 +46,7 @@
           height: 100px;
           line-height: 100px;
           float: right;
-          color: #FFFFFF;
+          color: $whiteColor;
           }
       }
     }
@@ -44,12 +55,12 @@
             padding: 0px 20px 0px 20px;
 
               &-text {
-              color: #FFFFFF;
+              color: $whiteColor;
               font-size: 15px;
               margin-top:20px;
               }
                 &-mini {
-                color: #FFFFFF;
+                color: $whiteColor;
                 font-size: 11px;
                 margin: 5px 0 40px 0;
                 }
@@ -70,20 +81,20 @@
           line-height: 40px;
           width: 60px;
           padding: 0px 20px 0px 20px;
-          border: solid#38AEF0;
+          border: solid $blueColor;
           float: right;
           margin-top: 28px;
-          color: #38AEF0;
+          color: $blueColor;
           text-align: center;
         }
           &-text {
-          color: #333333;
+          color: $mailTextColor;
           font-size: 20px;
           margin: 35px 0 15px 0;
           float: left;
           }
             &-mini {
-            color: #999999;
+            color: $subTextColor;
             font-size: 12px;
             clear: both;
             }
@@ -91,7 +102,7 @@
 
               &__row {
               height: calc(100vh - 100px);
-              border-top: solid#eeeeee;
+              border-top: solid $borderColor;
               padding: 0px 40px 0px 40px;
 
                 &-left {
@@ -100,19 +111,19 @@
                 padding: 46px 0 10px 0;
 
                   &-text {
-                  color: #434A54;
+                  color: $nickNameTextColor;
                   font-size: 16px;
                   font-weight: bold;
                   float: left;
                   padding: 0 10px 0 0;
                   }
                     &-days {
-                    color: #999999;
+                    color: $subTextColor;
                     font-size: 12px;
                     }
                 }
                       &-mini {
-                      color: #434A54;
+                      color: $dateTextColor;
                       font-size: 14px;
                       padding: 0 0 40px 0;
                       }
@@ -122,12 +133,12 @@
                             width: 100%;
                             position: absolute;
                             bottom: 0;
-                            background-color: #B8C3C7;
+                            background-color: $grayColor;
 
                               &-text {
                               width: 920px;
                               height: 50px;
-                              background-color: #FFFFFF;
+                              background-color: $whiteColor;
                               float: left;
                               margin: 20px 10px 20px 50px;
 
@@ -136,7 +147,7 @@
                                 line-height: 50px;
                                 float: left;
                                 padding: 0 0 0 10px;
-                                color: #B8C3C7;
+                                color: $grayColor;
                                 }
                                 &-imageicon {
                                 height: 50px;
@@ -150,10 +161,10 @@
                                   line-height: 50px;
                                   width: 100px;
                                   float: left;
-                                  background-color:#38AEF0;
+                                  background-color: $blueColor;
                                   margin: 20px 40px 20px 15px;
                                   text-align:center;
-                                  color: #FFFFFF;
+                                  color: $whiteColor;
                                   }
                              }
   }
