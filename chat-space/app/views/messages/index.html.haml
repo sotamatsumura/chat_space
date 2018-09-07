@@ -2,21 +2,17 @@
   = render 'groups/side_bar'
 
   .header
-    チャットグループが作成されました
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
 
   .contents
-    .contents__left-content
-      .contents__left-content-high
-        .contents__left-content-high-text
-          松村颯太
-        .contents__left-content-high-icon
-          %i.fa.fa-pencil-square-o
-          %i.fa.fa-cog
-      .contents__other
-        .contents__other-text
-          テストテスト
-        .contents__other-mini
-          テストテスト
+    = render 'groups/side_'
 
   .content
     .content__right
@@ -27,13 +23,8 @@
       .content__right-mini
         テストテスト
     .content__row
-      .content__row-left
-        .content__row-left-text
-          なるほどなるほど
-        .content__row-left-days
-          2018.0203
-      .content__row-mini
-        さささささ
+      = render @messages
+
     .content__footer
       .content__footer-text
         .content__footer-text-message
