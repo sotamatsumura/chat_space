@@ -9,12 +9,11 @@ $(function(){
                 </p>`
     return html;
   }
-  $('#new_message').on('submit', function(e){
+  $('.new_message').on('submit', function(e){
     e.preventDefault();
     console.log(this);
     var formData = new FormData(this);
-    // for(item of formData){
-    //   console.log(item);
+    console.log(formData)
     var url = $(this).attr('action')
     $.ajax({
       url: url,
@@ -28,8 +27,7 @@ $(function(){
       var html = buildHTML(data);
       $('.content__row-mini-lower').append(html)
       $('.content__footer-text-message').val('')
-      var datas = $("content__row-left" + data);
-      $(window).scrollTop(data.offset().top);
+      $("html,body").animate({scrollTop:$('#header').offset().top});
     })
     .fail(function(){
       alert('error');
