@@ -4,7 +4,10 @@
   .header
 
   .contents
+<<<<<<< HEAD
     = render 'groups/side_bar'
+=======
+>>>>>>> origin/master
 
   .content
     .content__right
@@ -18,6 +21,7 @@
       = render @message
 
     .content__footer
+<<<<<<< HEAD
       .content__footer-text
         .content__footer-text-message
           = form_for [@group, @message] do |f|
@@ -29,3 +33,12 @@
       .content__footer-botton
         = f.submit 'Send', class: 'form__submit'
 
+=======
+      = form_for [@group, @message] do |f|
+        .content__footer-text
+          = f.text_field :content, class: 'content__footer-text-message', placeholder: 'type a message'
+          = f.label :image, class: 'content__footer-text-imageicon' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'content__footer-botton'
+>>>>>>> origin/master

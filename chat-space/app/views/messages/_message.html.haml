@@ -2,7 +2,7 @@
   .content__row-left-text
     = message.user.name
   .content__row-left-days
-    = format_posted_time(message.created_at)
+    / = format_posted_time(message.created_at)
 .content__row-mini
   - if message.content.present?
     %p.content__row-mini-lower
