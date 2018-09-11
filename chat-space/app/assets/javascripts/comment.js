@@ -33,7 +33,7 @@ $(function(){
       var html = buildHTML(data);
       $('.content__row').append(html)
       $('.content__footer-text-message').val('')
-      // $("html,body").animate({scrollTop:$('#header').offset().top});
+      $("html,body").animate({scrollTop:$('.content__row-left').offset().top});
     })
     .fail(function(){
       alert('error');
