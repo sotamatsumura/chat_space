@@ -1,12 +1,18 @@
 $(function(){
   function buildHTML(message){
-    var html = `<p>
-                  <strong>
-                    <a href=/groups/${message.groups_id}/messages></a>
-                    ：
-                  </strong>
-                  ${message.content}
-                </p>`
+    var html = `<div class="content__row-left">
+                 <div class="content__row-left-text">
+                   ${ message.user_name }
+                 </div>
+                 <div class="content__row-left-days">
+                 ${ message.created_at }
+                 </div>
+               </div>
+               <div class="content__row-mini">
+                 <p class="content__row-mini-lower">
+                 ${ message.content }
+                 </p>
+               </div>`
     return html;
   }
   $('.new_message').on('submit', function(e){
@@ -22,15 +28,15 @@ $(function(){
       dataType: 'json',
       processData: false,
       contentType: false
-    }
+    })
     .done(function(data){
       var html = buildHTML(data);
-      $('.content__row-mini-lower').append(html)
+      $('.content__row').append(html)
       $('.content__footer-text-message').val('')
-      $("html,body").animate({scrollTop:$('#header').offset().top});
+      // $("html,body").animate({scrollTop:$('#header').offset().top});
     })
     .fail(function(){
       alert('error');
-    })
+    });
   });
 });
