@@ -2,17 +2,8 @@
   = render 'groups/side_bar'
 
   .header
-    .form
-      = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        .form__mask
-          = f.label :image, class: 'form__mask__image' do
-            = fa_icon 'picture-o', class: 'icon'
-            = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'
 
   .contents
-    = render 'groups/side_'
 
   .content
     .content__right
@@ -26,10 +17,10 @@
       = render @messages
 
     .content__footer
-      .content__footer-text
-        .content__footer-text-message
-          type a message
-        .content__footer-text-imageicon
-          %i.fa.fa-image
-      .content__footer-botton
-        SEND
+      = form_for [@group, @message] do |f|
+        .content__footer-text
+          = f.text_field :content, class: 'content__footer-text-message', placeholder: 'type a message'
+          = f.label :image, class: 'content__footer-text-imageicon' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'content__footer-botton'
