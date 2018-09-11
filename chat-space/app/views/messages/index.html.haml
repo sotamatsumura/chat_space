@@ -4,10 +4,6 @@
   .header
 
   .contents
-<<<<<<< HEAD
-    = render 'groups/side_bar'
-=======
->>>>>>> origin/master
 
   .content
     .content__right
@@ -18,22 +14,9 @@
       .content__right-mini
         テストテスト
     .content__row
-      = render @message
+      = render @messages
 
     .content__footer
-<<<<<<< HEAD
-      .content__footer-text
-        .content__footer-text-message
-          = form_for [@group, @message] do |f|
-            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        .content__footer-text-imageicon
-          = f.label :image, class: 'form__mask__image' do
-            = fa_icon 'picture-o', class: 'icon'
-            = f.file_field :image, class: 'hidden'
-      .content__footer-botton
-        = f.submit 'Send', class: 'form__submit'
-
-=======
       = form_for [@group, @message] do |f|
         .content__footer-text
           = f.text_field :content, class: 'content__footer-text-message', placeholder: 'type a message'
@@ -41,4 +24,3 @@
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'content__footer-botton'
->>>>>>> origin/master
