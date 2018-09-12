@@ -27,10 +27,10 @@ $(function() {
     .done(function(data){
       if (data.length !== 0) {
         data.forEach(function(data){
-          datas = data
+          users_data = data
         });
       }
-      var html = AddBuildHTML(datas);
+      var html = AddBuildHTML(users_data);
       $('#user-search-result').append(html)
     })
     .fail(function(){
@@ -39,7 +39,7 @@ $(function() {
   });
   $(document).on("click", ".user-search-add", function () {
     $("#user-search-result").empty();
-    var html = RemoveBuildHTML(datas);
+    var html = RemoveBuildHTML(users_data);
     $('#chat-group-users').append(html)
   });
   $(document).on("click", ".user-search-remove", function () {
