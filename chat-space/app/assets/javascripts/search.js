@@ -29,4 +29,7 @@ $(function() {
       alert('error');
     })
   });
+$(document).on("click", ".user-search-add", function () {
+    console.log(123)
+});
 });
