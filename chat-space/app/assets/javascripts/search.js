@@ -31,6 +31,7 @@ $(function() {
         });
       }
       var html = AddBuildHTML(users_data);
+      $("#user-search-result").empty();
       $('#user-search-result').append(html)
     })
     .fail(function(){
