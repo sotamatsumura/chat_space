@@ -29,7 +29,7 @@ $(function() {
       alert('error');
     })
   });
-$(document).on("click", ".user-search-add", function () {
-    console.log(123)
-});
+  $(document).on("click", ".user-search-add", function () {
+      $(".chat-group-user").empty();
+  });
 });
