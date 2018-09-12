@@ -38,11 +38,11 @@ $(function() {
     })
   });
   $(document).on("click", ".user-search-add", function () {
-    $(".chat-group-user").empty();
+    $("#user-search-result").empty();
     var html = RemoveBuildHTML(datas);
     $('#chat-group-users').append(html)
   });
   $(document).on("click", ".user-search-remove", function () {
-    $(".chat-group-user").empty();
+    $("#chat-group-user-8").empty();
   });
 });
