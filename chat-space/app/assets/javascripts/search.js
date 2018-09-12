@@ -42,4 +42,7 @@ $(function() {
     var html = RemoveBuildHTML(datas);
     $('#chat-group-users').append(html)
   });
+  $(document).on("click", ".user-search-remove", function () {
+    $(".chat-group-user").empty();
+  });
 });
