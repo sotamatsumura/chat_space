@@ -23,8 +23,8 @@ $(function() {
       var html = buildHTML(datas);
       $('#user-search-result').append(html)
     })
-//     .fail(function(){
-//       alert('error');
-//     })
+    .fail(function(){
+      alert('error');
+    })
   });
 });
