@@ -17,8 +17,10 @@ $(function() {
       dataType: 'json'
     })
     .done(function(data){
-      for (var i = 0; i < data.length; i++) {
-        datas = (data[i]);
+      if (data.length !== 0) {
+        data.forEach(function(data){
+          datas = data
+        });
       }
       var html = buildHTML(datas);
       $('#user-search-result').append(html)
