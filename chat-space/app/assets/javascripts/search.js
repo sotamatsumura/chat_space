@@ -21,7 +21,7 @@ $(function() {
         datas = (data[i]);
       }
       var html = buildHTML(datas);
-      $('#chat-group-users').append(html)
+      $('#user-search-result').append(html)
     })
 //     .fail(function(){
 //       alert('error');
