@@ -1,8 +1,6 @@
 $(function() {
   function buildHTML(message) {
-    var insertImage = '';
-    if (message.image.url) {
-      insertImage = `<img src="${message.image.url}">`;
+    (message.image.url) ? var { insertImage = `<img src="${message.image.url}">`;
     }
     var html = `
               <div class="content-ajax" data-message-id=: "${message.id}"}>
