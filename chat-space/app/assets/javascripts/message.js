@@ -1,7 +1,6 @@
 $(function() {
   function buildHTML(message) {
-    (message.image.url) ? var { insertImage = `<img src="${message.image.url}">`;
-    }
+    (message.image.url) ? var insertImage = `<img src="${message.image.url}">`;
     var html = `
               <div class="content-ajax" data-message-id=: "${message.id}"}>
                 <div class="content__row-left">
@@ -30,7 +29,6 @@ $(function() {
       dataType: 'json'
     })
     .done(function(data) {
-      console.log(123)
       var insertHTML = '';
       data.messages.forEach(function(message) {
           insertHTML += buildHTML(message);
