@@ -5,7 +5,7 @@ $(function() {
       insertImage = `<img src="${message.image.url}">`;
     }
     var html = `
-              <div class="content-ajax">
+              <div class="content-ajax" data-message-id=: "${message.id}"}>
                 <div class="content__row-left">
                   <div class="content__row-left-text"">
                   ${message.name}
@@ -32,13 +32,15 @@ $(function() {
       dataType: 'json'
     })
     .done(function(data) {
-      var id = $('.content-ajax').data('messageId');
+      console.log(123)
+      // var id = $('.content-ajax').data('messageId');
       var insertHTML = '';
       data.messages.forEach(function(message) {
-        if (message.id > id)
+        // if (message.id > id)
           insertHTML += buildHTML(message);
       });
-      $('.content__row').prepend(insertHTML);
+      $('.content__row').html(insertHTML);
+      // $('.content__row').val('')
     })
     .fail(function(){
       alert('error');
