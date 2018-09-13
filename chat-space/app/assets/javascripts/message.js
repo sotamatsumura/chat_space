@@ -33,14 +33,11 @@ $(function() {
     })
     .done(function(data) {
       console.log(123)
-      // var id = $('.content-ajax').data('messageId');
       var insertHTML = '';
       data.messages.forEach(function(message) {
-        // if (message.id > id)
           insertHTML += buildHTML(message);
       });
       $('.content__row').html(insertHTML);
-      // $('.content__row').val('')
     })
     .fail(function(){
       alert('error');
