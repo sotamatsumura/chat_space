@@ -1,10 +1,11 @@
-.content__row-left
-  .content__row-left-text
-    = message.user.name
-  .content__row-left-days
-    / = format_posted_time(message.created_at)
-.content__row-mini
-  - if message.content.present?
-    %p.content__row-mini-lower
-      = message.content
-  = image_tag message.image.url, class: 'content__row-mini-image' if message.image.present?
+.content-ajax{ "data-message-id": "#{message.id}"}
+  .content__row-left
+    .content__row-left-text
+      = message.user.name
+    .content__row-left-days
+      / = format_posted_time(message.created_at)
+  .content__row-mini
+    - if message.content.present?
+      %p.content__row-mini-lower
+        = message.content
+    = image_tag message.image.url, class: 'content__row-mini-image' if message.image.present?
